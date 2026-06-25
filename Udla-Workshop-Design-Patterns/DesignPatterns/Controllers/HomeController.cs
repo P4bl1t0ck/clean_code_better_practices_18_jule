@@ -45,8 +45,9 @@ namespace DesignPatterns.Controllers
         [HttpGet]
         public IActionResult AddExplorer()
         {
-
-            _vehicleRepository.AddVehicle(new Car("red", "Ford", "Explorer"));
+            var factory = chooseFactory("escape");
+            var car = factory.Create();
+            _vehicleRepository.AddVehicle(car);
             return Redirect("/");
         }
 
@@ -101,6 +102,7 @@ namespace DesignPatterns.Controllers
            
            
         }
+        //Nueva funcion hecha para la practica
         public CarFactory chooseFactory(string brand)
         {
             switch (brand.ToLower()) {
