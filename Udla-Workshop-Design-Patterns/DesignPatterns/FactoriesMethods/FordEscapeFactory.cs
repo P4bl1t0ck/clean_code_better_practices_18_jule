@@ -2,7 +2,7 @@
 
 namespace DesignPatterns.FactoryMethods
 {
-    public class FordEscacpeFactory : CarFactory
+    public class FordEscapeFactory : CarFactory
     {
         public override Car Create()
         {

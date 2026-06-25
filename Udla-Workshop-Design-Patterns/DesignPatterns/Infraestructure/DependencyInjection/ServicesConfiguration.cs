@@ -5,14 +5,13 @@ namespace DesignPatterns.Infraestructure.DependencyInjection
 {
     public class ServicesConfiguration
     {
-
-
         public void ConfigureServices(IServiceCollection services)
         {
             //Solid point 1
             // Usar DBVehicleRepository al integrar Base de datos
-            services.AddTransient<IVehicleRepository, DBVehicleRepository>();
-            //services.AddTransient<IVehicleRepository, MyVehiclesRepository>();
+            //services.AddTransient<IVehicleRepository, DBVehicleRepository>();
+            services.AddTransient<IVehicleRepository, MyVehicleRepository>();
+            
         }
     }
 }

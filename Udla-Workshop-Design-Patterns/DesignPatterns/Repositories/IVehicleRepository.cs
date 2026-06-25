@@ -7,11 +7,11 @@ using DesignPatterns.Infraestructure.Singleton;
 
 namespace DesignPatterns.Repositories
 {
-    public class MyVehiclesRepository : IVehicleRepository
+    public class MyVehicleRepository : IVehicleRepository
     {
         private readonly MemoryCollection _memoryCollection = MemoryCollection.Instance;
 
-        public MyVehiclesRepository()
+        public MyVehicleRepository()
         {
 
         }

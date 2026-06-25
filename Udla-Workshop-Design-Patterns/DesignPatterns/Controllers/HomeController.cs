@@ -8,6 +8,8 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
+using DesignPatterns.Infraestructure.Singleton;
+using DesignPatterns.Factories;
 
 namespace DesignPatterns.Controllers
 {
@@ -103,11 +105,11 @@ namespace DesignPatterns.Controllers
         {
             switch (brand.ToLower()) {
                 case "escape":
-                    return new FordEscacpeFactory();
+                    return new FordEscapeFactory(); // Revisa si tu clase se llama con este typo "Escacpe" o Escape
                 case "mustang":
-                    return new FordMustangFactory();
+                    return new FordMustangFactory(); // Asegúrate de que esté bien escrito aquí
                 default:
-                    throw new ArgumentException ("NO se puede crear un vehiculo de nuevo");
+                    throw new ArgumentException ("No se puede crear el vehículo");
             }
         }
 

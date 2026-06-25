@@ -17,6 +17,8 @@ namespace DesignPatterns.Infraestructure.Singleton
         {
             get
             {
+                //Aqui nos explico de como podemos utilizar el patron de diseño Singleton, ya que este proyecto
+                //Guarda todo en memoria
                 if (_instance == null)
                 {
                     _instance = new MemoryCollection();
